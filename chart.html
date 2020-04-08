@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="Edno Sousa Teofilo" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>CORONA GRAFICOS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="static/css/bootstrap.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="static/chart.js"></script>
+    <script src="static/chart2.js"></script>
+  
+    <style>
+      body1{
+        background: rgb(47, 46, 68);
+      }
+      div.borda1 {
+        border-radius: 10px 20px;
+        }
+      div.borda {
+      border-radius: 10px 20px;
+      background: rgb(47, 46, 68);
+      box-shadow: 0px 0px 6px 2px #2e2941;
+      }
+      div#resume_infectados{
+        border-radius: 10px 20px;
+        background: rgb(193, 212, 21);
+        box-shadow: 0px 0px 6px 2px #2e2941;
+      }
+      div#resume_recuperados{
+        border-radius: 10px 20px;
+        background: rgb(11, 207, 60);
+        box-shadow: 0px 0px 6px 2px #2e2941;
+      }
+      div#resume_mortos{
+        border-radius: 10px 20px;
+        background: rgb(219, 17, 17);
+        box-shadow: 0px 0px 6px 2px #2e2941;
+      }
+      div#resume_letalidade{
+        border-radius: 10px 20px;
+        background: rgb(90, 18, 173);
+        box-shadow: 0px 0px 6px 2px #2e2941;
+      }
+      
+      </style>
+    
+
+  </head>
+  <body class="bg-dark text-white">
+
+    <main role="main" class="container " >
+      <div class="row">
+        <div class="col-md-7"> 
+          <h1 class="text-aling-center page-header">COVID-19 BRASIL GRÁFICOS</h1>
+          <p class="badge badge-pill badge-dark font-italic">Atualizado Diariamente</p>
+        </div> 
+        <div class="col-md-3 ">        
+        </div>
+      </div>
+      <br>
+
+        <div class="row">
+          <div id="resume_infectados" class="col-md-3 ">
+          </div>
+          <div id="resume_recuperados" class="col-md-3 ">
+          </div>
+          <div id="resume_mortos" class="col-md-3 ">
+          </div>
+          <div id="resume_letalidade" class="col-md-3 ">
+          </div>
+        </div> <br>   
+
+        <div class="row">
+          <div class="col-md-7 blog-main"><!-- /coluna 1 --> 
+            <br>
+            <div id="container1" class="borda" style="width:100%; height:500px;"></div><br><br>
+            <div id="container2" class="borda" style="width:100%; height:500px;"></div><br><br>
+            <div id="container3" class="borda" style="width:100%; height:500px;"></div><br><br>
+          </div>
+          <div class="col-md-4 blog-main"><!-- <img src="{% static 'img/casos_01.png' %}"> Mais informações podem ser encontrada em <cite>covid.saude.gov.br</cite> --> 
+            <br>
+            <div id="container5" class="borda" style="width:100%; height:500px;"></div><br><br>
+            <div id="container6" class="borda" style="width:100%; height:500px;"></div><br><br>
+            <div id="container4" class="borda" style="width:100%; height:500px;"></div>
+            
+          </div>
+        </div>
+    </main>
+    
+    <br><br><br>
+    <footer class="footer" style="background: #2d3246;">
+      <div class="container">
+        <div class="row">
+  
+          <div class="col-md-12 col-xl-4 text-light text-center">
+            <h1>BETA</h1>
+            <div>Visitas: <a href='https://contador.s12.com.br'><img src='https://contador.s12.com.br/img-bx3YZbzY1yACddYZ-3.gif' alt='visitas'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=bx3YZbzY1yACddYZ'></script></div>
+          </div>
+  
+          <div class="col-md-0 col-xl-4 text-light text-center">
+            <br><br>
+            <td >© 2020 Copyright - Projeto Pessoal Teste 1</td>
+          </div>
+          <div class="col-md-0 col-xl-2 text-center">
+          </div>
+          <div class="col-md-12 col-xl-2 text-center ">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/UFMA.jpg/800px-UFMA.jpg" width="84" height="86" class="img-circle" alt="Logo UFMA">
+          </div>
+  
+        </div>
+      </div>
+    </foote>
+  
+  </body>
+  </html>
+
+ 

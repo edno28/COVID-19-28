@@ -1,0 +1,17 @@
+<div class="row">
+   <button onclick="IMC()" type="button" class="btn btn-primary btn-lg">Calcular</button></div> 
+   <button onclick="LIMPAR()" type="button" class="btn btn-primary btn-lg btn-danger">Limpar</button></div>
+   <button id="resultado" class=" btn btn-primary btn-lg btn-success">Seu IMC:</button></div>
+</div>   
+
+function data_show(){getJSON(url2, function (response) {
+    let json = JSON.parse(response);
+    let arr = Object.keys(json).map(key => [key, json[key]])
+    let brasil = arr[0][1][39];
+    let letalidade=brasil['deaths']/(brasil['confirmed']/100)
+    document.getElementById("resume_infectados").innerHTML =`<h1>${brasil['confirmed']}</h1><br><h4>Casos Confirmados</h4>`
+    document.getElementById("resume_recuperados").innerHTML = `<h1>${brasil['recovered']}</h1><br><h4>Casos Recuperados</h4>`
+    document.getElementById("resume_mortos").innerHTML = `<h1>${brasil['deaths']}</h1><br><h4>Óbitos</h4>`
+    document.getElementById("resume_letalidade").innerHTML = `<h1>${letalidade.toFixed(2)}%</h1><br><h4>Letalidade</h4>`
+})};
+data_show()
