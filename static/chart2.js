@@ -121,7 +121,7 @@ function grafico2(data,seletor){
             text: 'SITUAÇÃO REGIONAL'
         },
         tooltip: {
-            pointFormat: `{series.name}: {data.name}<br>
+            pointFormat: `{series.name}: {point.y:.1f}<br>
                         <b>{point.percentage:.1f}%</b> `
         },
         plotOptions: {
@@ -129,7 +129,8 @@ function grafico2(data,seletor){
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: false
+                    enabled: false,
+                    
                 },
                 showInLegend: true
             }

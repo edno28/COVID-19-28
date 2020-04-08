@@ -222,7 +222,7 @@ function grafico1(data,seletor){
             type: 'area', 
             name: 'Casos',  
             data: data.map(values => values[1]),
-            color:"#ffff00"  
+            color:"#a10bcf"  
         }],
 
         yAxis: {
@@ -269,7 +269,7 @@ function grafico1(data,seletor){
 function grafico2(data,seletor){
     Highcharts.chart(seletor, {
         title: {
-            text: "NOVOS CASOS POR DIA"
+            text: "NOVOS CASOS DIÁRIO"
         },
         series: [{
             type: 'column',
@@ -296,6 +296,10 @@ function grafico2(data,seletor){
                 animation: {
                     duration: 1500
                 },
+                dataLabels: {
+                    enabled: false,
+                    
+                }
             }
         },
     });
@@ -311,13 +315,13 @@ function grafico3(data,seletor){
             type: 'area',
             name: 'Mortos',
             data: data.map(values => values[2]),
-            color:'#B22222' 
+            color:'rgb(90, 18, 173)' 
         },
         {
             type: 'area',
             name: 'Curados',
             data: data.map(values => values[3]),
-            color:'#00CED1'
+            color:'rgb(11, 207, 60)'
         }],
         yAxis: {
             title: {
@@ -363,17 +367,15 @@ function grafico4(data,seletor){
             type: 'pie'
         },
         title: {
-            text: 'COMPARATIVO'
-        },
-        tooltip: {
-            pointFormat: '{data.name}: <b>{point.percentage:.1f}%</b>'
+            text: 'CONTATOS'
         },
         plotOptions: {
             pie: {
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: false
+                    enabled: true,
+                    format: '{point.name}: {point.percentage:.1f}%'
                 },
                 showInLegend: true
             }
@@ -384,15 +386,17 @@ function grafico4(data,seletor){
             data: [{
                 name: 'Infectados',
                 y: data.map(values => values[1])[data.map(values => values[1]).length-1],
-                color: Highcharts.getOptions().colors[0] 
+                color: "rgb(193, 212, 21)"
             }, {
                 name: 'Mortes',
                 y: data.map(values => values[2])[data.map(values => values[2]).length-1],
+                color:"rgb(90, 18, 173)",
                 sliced: true,
                 selected: true
             }, {
                 name: 'Curados',
                 y: data.map(values => values[3])[data.map(values => values[3]).length-1],
+                color:"rgb(11, 207, 60)"
             },]
         }]
 });
