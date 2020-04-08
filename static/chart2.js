@@ -17,10 +17,23 @@ function data_show(){getJSON(url2, function (response) {
     let arr = Object.keys(json).map(key => [key, json[key]])
     let brasil = arr[0][1][39];
     let letalidade=brasil['deaths']/(brasil['confirmed']/100)
+
+    var atualizacao=[brasil['updated_at']]  
+    var atualizacao= atualizacao[0]
+    var dia=atualizacao.substr(0,10)
+    var hora=atualizacao.substr(11,8)
+    hora=hora.split(":")
+    hora=[hora[1],hora[0]-4]
+    hora=`${hora[1]}:${hora[0]}`
+
+    console.log(hora)
+
     document.getElementById("resume_infectados").innerHTML =`<h1>${brasil['confirmed']}</h1><br><h4>Casos Confirmados</h4>`
     document.getElementById("resume_recuperados").innerHTML = `<h1>${brasil['recovered']}</h1><br><h4>Casos Recuperados</h4>`
     document.getElementById("resume_mortos").innerHTML = `<h1>${brasil['deaths']}</h1><br><h4>Óbitos</h4>`
     document.getElementById("resume_letalidade").innerHTML = `<h1>${letalidade.toFixed(2)}%</h1><br><h4>Letalidade</h4>`
+    document.getElementById("atualização").innerHTML = `Ultima Atualização: ${hora}  ${dia}`
+    
 })};
 data_show()
 
@@ -46,8 +59,6 @@ function mod1(data){
     new_data.push(confirmados, mortos, curados);   
     return new_data
 }
-
-
 
 function grafico1(data,seletor){
     Highcharts.chart(seletor, {

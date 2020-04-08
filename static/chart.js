@@ -425,6 +425,7 @@ function chart(seletor,grafico,modificador_dado=null){getJSON(url, function (res
 
 function mod1(data){
     data.splice(0,36);
+    data.map(values => values[1])
     return data
 }
 function mod3(data){
