@@ -72,7 +72,7 @@ function grafico1(data,seletor){
             text: 'Fonte: WHO'
         },
         xAxis: {
-            categories: ['Braisl','Ch1na','Itália', 'EUA'],
+            categories: ['Brasil','China','Itália', 'EUA'],
             title: {
                 text: null
             }
