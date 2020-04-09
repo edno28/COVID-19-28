@@ -4,6 +4,22 @@
    <button id="resultado" class=" btn btn-primary btn-lg btn-success">Seu IMC:</button></div>
 </div>   
 
-links:
-https://painel-covid19.saude.ma.gov.br/
-j9
+ <div class="borda" style="width:100%;height:500px;">
+              <ul><li class="active"><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para mais informações <span class="glyphicon glyphicon-search"></span></h3></a></li></ul>
+              <div style="width:100%;height:480px; overflow: auto;">
+                <ul>  
+                  <li><a href="https://painel-covid19.saude.ma.gov.br/" target="_blank"><h4>Secretaria de Saude do Maranhão</h4><br>
+                    <p>O painel online e completo de todo o monitoramento do Maranhão.</p></a></li>
+
+                  <li><a href="https://who.sprinklr.com/" target="_blank"><h4>Organização Mundial da Saúde (OMS)</h4><br>
+                    <p>Braço para a saúde da Organização das Nações Unidas (ONU), o órgão centraliza informações e recomendações em torno da crise.</p></a></li>
+                      
+                  <li><a target="_blank" href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"><h4>Universidade Johns Hopkins</h4><br>
+                    <p>O painel online da prestigiada instituição americana de ensino se tornou uma referência durante a 
+                      pandemia, principalmente pela agilidade da atualização dos dados.</p></a></li>
+
+                  <li><a target="_blank" href="https://nextstrain.org/ncov"><h4>Nextstrain</h4><br>
+                    <p>Plataforma científica colaborativa apresenta o mapeamento genético do vírus a partir da análise de casos ao redor do mundo. Isso permite, por exemplo, identificar padrões de disseminação da doença.</p></a></li>
+                </ul>
+              </div>  
+            </div>

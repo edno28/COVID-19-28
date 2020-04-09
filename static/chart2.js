@@ -53,10 +53,10 @@ function data_show(){getJSON(url2, function (response) {
 
     date_update(brasil);
 
-    document.getElementById("resume_infectados").innerHTML =`<h1>${brasil['confirmed']}</h1><br><h4>Casos Confirmados</h4>`
-    document.getElementById("resume_recuperados").innerHTML = `<h1>${brasil['recovered']}</h1><br><h4>Casos Recuperados</h4>`
-    document.getElementById("resume_mortos").innerHTML = `<h1>${brasil['deaths']}</h1><br><h4>Óbitos</h4>`
-    document.getElementById("resume_letalidade").innerHTML = `<h1>${letalidade.toFixed(2)}%</h1><br><h4>Letalidade</h4>`   
+    document.getElementById("resume_infectados").innerHTML =`<h2>${brasil['confirmed']}</h2><br><h4>Casos Confirmados</h4>`
+    document.getElementById("resume_recuperados").innerHTML = `<h2>${brasil['recovered']}</h2><br><h4>Casos Recuperados</h4>`
+    document.getElementById("resume_mortos").innerHTML = `<h2>${brasil['deaths']}</h2><br><h4>Óbitos</h4>`
+    document.getElementById("resume_letalidade").innerHTML = `<h2>${letalidade.toFixed(2)}%</h2><br><h4>Letalidade</h4>`   
 })};
 
 function mod1(data){
@@ -162,22 +162,22 @@ function grafico2(data,seletor){
             name: 'Contaminados',
             colorByPoint: true,
             data: [{
-                name: 'Suldeste 9487',
-                y: 9487,
+                name: 'Suldeste 10624',
+                y: 10624,
                 color:"#3CB371",
                 sliced: true,
                 selected: true
             },{ 
-                name: 'Norte 1222',
-                y: 1222,
+                name: 'Norte 1360',
+                y: 1360,
                 color:"#C71585"
             }, {
-                name: 'Nordeste  2825',
-                y: 2825,
+                name: 'Nordeste  3242',
+                y: 3242,
                 color:"#FF4500"
             }, {
-                name: 'Centro-Oeste  842',
-                y: 842,
+                name: 'Centro-Oeste  903',
+                y: 903,
                 color:"#6A5ACD"
             }, {
                 name: 'Sul  1551',
