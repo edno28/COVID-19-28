@@ -264,7 +264,7 @@ function grafico1(data,seletor){
             }
         },
     });
-    document.getElementById(seletor).innerHTML = Highcharts.chart()  
+    Highcharts.chart()  
 }
 function grafico2(data,seletor){
     Highcharts.chart(seletor, {
@@ -303,7 +303,7 @@ function grafico2(data,seletor){
             }
         },
     });
-    document.getElementById(seletor).innerHTML = Highcharts.chart()  
+    Highcharts.chart()  
 }
 function grafico3(data,seletor){
     Highcharts.chart(seletor, {
@@ -356,7 +356,7 @@ function grafico3(data,seletor){
             }
         },
     });
-    document.getElementById(seletor).innerHTML = Highcharts.chart()  
+    Highcharts.chart()  
 }
 function grafico4(data,seletor){
     Highcharts.chart(seletor, {
@@ -400,7 +400,7 @@ function grafico4(data,seletor){
             },]
         }]
 });
-    document.getElementById(seletor).innerHTML = Highcharts.chart()  
+    Highcharts.chart()  
 }
 
 

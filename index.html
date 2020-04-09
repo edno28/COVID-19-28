@@ -13,7 +13,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-   
+
+    <link rel="apple-touch-icon" sizes="57x57" href="static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="static/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -63,31 +82,29 @@
     <main role="main" class="container " >
       <div class="row">
         <div class="col-md-7"> 
-          <h1 class="text-aling-center page-header">COVID-19 BRASIL GRÁFICOS</h1>
-          <p  class="badge badge-pill badge-dark font-italic">Atualizado Diariamente</p>
+          <h1 class="text-aling-center page-header">COVID-19 BRASIL GRÁFICOS <img style="width:80px; height:80%" src="data:image/svg+xml;base64,PHN2ZyBpZD0iZmxhdCIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0i%0D%0ANTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0yNjYuMTk4%0D%0ANjcgNDgwLjMxMSAxMC44MzUxNi0zNy45MjMwNWExNy42ODY3NyAxNy42ODY3NyAwIDAgMSAxMy41%0D%0ANTU3NC0xMi40ODggMTcuNjg2OCAxNy42ODY4IDAgMCAxIDE3LjMwMjg0IDYuMzQ5ODZsMjQuNTI0%0D%0AOTUgMzAuODkyNDZhMTAuNjA1ODIgMTAuNjA1ODIgMCAwIDAgMTIuMzY1MTcgMy4yMDQxNCAxMC42%0D%0AMDU4MSAxMC42MDU4MSAwIDAgMCA2LjQ3NzgyLTExLjAwOTE2bC00LjUwMjUxLTM5LjE4NmExNy42%0D%0AODY4IDE3LjY4NjggMCAwIDEgNy43NDQ5Mi0xNi43MjUgMTcuNjg2NzggMTcuNjg2NzggMCAwIDEg%0D%0AMTguNDE1NzItLjc1NWwzNC40ODAxMyAxOS4xNTU2MmExMC42MDU4MiAxMC42MDU4MiAwIDAgMCAx%0D%0AMi42NTAxLTEuNzcxNzEgMTAuNjA1ODMgMTAuNjA1ODMgMCAwIDAgMS43NzE3MS0xMi42NTAxbC0x%0D%0AOS4xNTU2My0zNC40ODAxMmExNy42ODY4IDE3LjY4NjggMCAwIDEgLjc1NS0xOC40MTU3MiAxNy42%0D%0AODY3OCAxNy42ODY3OCAwIDAgMSAxNi43MjUtNy43NDQ5M2wzOS4xODYgNC41MDI1MmExMC42MDU4%0D%0ANCAxMC42MDU4NCAwIDAgMCAxMS4wMDkxNy02LjQ3NzgzIDEwLjYwNTgzIDEwLjYwNTgzIDAgMCAw%0D%0AIC0zLjIwNDEzLTEyLjM2NTE4bC0zMC44OTI0Ny0yNC41MjQ5NGExNy42ODY4IDE3LjY4NjggMCAw%0D%0AIDEgLTYuMzQ5ODUtMTcuMzAyODQgMTcuNjg2ODEgMTcuNjg2ODEgMCAwIDEgMTIuNDg4LTEzLjU1%0D%0ANTc1bDM3LjkyNjIxLTEwLjgzNjA2YTEwLjYwNTgyIDEwLjYwNTgyIDAgMCAwIDcuNjkyMjgtMTAu%0D%0AMTk3OTEgMTAuNjA1ODIgMTAuNjA1ODIgMCAwIDAgLTcuNjkyMTgtMTAuMTk3NzZsLTM3LjkyNjIx%0D%0ALTEwLjgzNjA2YTE3LjY4NjgxIDE3LjY4NjgxIDAgMCAxIC0xMi40ODgtMTMuNTU1NzUgMTcuNjg2%0D%0AOCAxNy42ODY4IDAgMCAxIDYuMzQ5ODUtMTcuMzAyODRsMzAuODkyNDctMjQuNTI0OTRhMTAuNjA1%0D%0AODMgMTAuNjA1ODMgMCAwIDAgMy4yMDQxMy0xMi4zNjUxOCAxMC42MDU4MyAxMC42MDU4MyAwIDAg%0D%0AMCAtMTEuMDA5MTYtNi40Nzc4M2wtMzkuMTg2IDQuNTAyNTJhMTcuNjg2OCAxNy42ODY4IDAgMCAx%0D%0AIC0xNi43MjUtNy43NDQ5MiAxNy42ODY4MiAxNy42ODY4MiAwIDAgMSAtLjc1NS0xOC40MTU3M2wx%0D%0AOS4xNTU2My0zNC40ODAxMmExMC42MDU4MyAxMC42MDU4MyAwIDAgMCAtMS43NzE3MS0xMi42NTAx%0D%0AIDEwLjYwNTgyIDEwLjYwNTgyIDAgMCAwIC0xMi42NTAxLTEuNzcxNzFsLTM0LjQ4MDEzIDE5LjE1%0D%0ANTYyYTE3LjY4NjggMTcuNjg2OCAwIDAgMSAtMTguNDE1NzItLjc1NSAxNy42ODY3NyAxNy42ODY3%0D%0ANyAwIDAgMSAtNy43NDQ5Mi0xNi43MjVsNC41MDI1MS0zOS4xODZhMTAuNjA1ODEgMTAuNjA1ODEg%0D%0AMCAwIDAgLTYuNDc3ODItMTEuMDA5MTYgMTAuNjA1ODIgMTAuNjA1ODIgMCAwIDAgLTEyLjM2NTE3%0D%0AIDMuMjA0MTRsLTI0LjUyNTA0IDMwLjg5MjM2YTE3LjY4Njc4IDE3LjY4Njc4IDAgMCAxIC0xNy4z%0D%0AMDI4NCA2LjM0OTg2IDE3LjY4Njc3IDE3LjY4Njc3IDAgMCAxIC0xMy41NTU3NC0xMi40ODhsLTEw%0D%0ALjgzNy0zNy45MjkzNWExMC42MDU4MyAxMC42MDU4MyAwIDAgMCAtMTAuMTkzNTktNy42OTIxOCAx%0D%0AMC42MDU4NCAxMC42MDU4NCAwIDAgMCAtMTAuMjAxOTQgNy42OTIxOGwtMTAuODM1MTUgMzcuOTIz%0D%0AMDRhMTcuNjg2NzggMTcuNjg2NzggMCAwIDEgLTEzLjU1NTc0IDEyLjQ4OCAxNy42ODY3OSAxNy42%0D%0AODY3OSAwIDAgMSAtMTcuMzAyODQtNi4zNDk4NWwtMjQuNTI1LTMwLjg5MjQ3YTEwLjYwNTgyIDEw%0D%0ALjYwNTgyIDAgMCAwIC0xMi4zNjUxNC0zLjIwNDA3IDEwLjYwNTgyIDEwLjYwNTgyIDAgMCAwIC02%0D%0ALjQ3NzgyIDExLjAwOTE3bDQuNTAyNTEgMzkuMTg2YTE3LjY4NjggMTcuNjg2OCAwIDAgMSAtNy43%0D%0ANDQ5MiAxNi43MjUgMTcuNjg2OCAxNy42ODY4IDAgMCAxIC0xOC40MTU3Mi43NTVsLTM0LjQ4MDE3%0D%0ALTE5LjE1NTY2YTEwLjYwNTgzIDEwLjYwNTgzIDAgMCAwIC0xMi42NTAxIDEuNzcxNzEgMTAuNjA1%0D%0AODMgMTAuNjA1ODMgMCAwIDAgLTEuNzcxNzEgMTIuNjUwMWwxOS4xNTU2MyAzNC40ODAxM2ExNy42%0D%0AODY4IDE3LjY4NjggMCAwIDEgLS43NTUgMTguNDE1NzIgMTcuNjg2OCAxNy42ODY4IDAgMCAxIC0x%0D%0ANi43MjUgNy43NDQ5MmwtMzkuMTg2LTQuNTAyNTFhMTAuNjA1ODIgMTAuNjA1ODIgMCAwIDAgLTEx%0D%0ALjAwOTE1IDYuNDc3ODUgMTAuNjA1ODIgMTAuNjA1ODIgMCAwIDAgMy4yMDQxMyAxMi4zNjUxN2wz%0D%0AMC44OTI0NyAyNC41MjVhMTcuNjg2NzkgMTcuNjg2NzkgMCAwIDEgNi4zNDk4NSAxNy4zMDI4NCAx%0D%0ANy42ODY3OCAxNy42ODY3OCAwIDAgMSAtMTIuNDg4IDEzLjU1NTc0bC0zNy45MjYyNyAxMC44MzYw%0D%0ANWExMC42MDU4MyAxMC42MDU4MyAwIDAgMCAtNy42OTIxOCAxMC4xOTc3NyAxMC42MDU4MyAxMC42%0D%0AMDU4MyAwIDAgMCA3LjY5MjE4IDEwLjE5Nzc2bDM3LjkyNjIxIDEwLjgzNjA2YTE3LjY4Njc4IDE3%0D%0ALjY4Njc4IDAgMCAxIDEyLjQ4OCAxMy41NTU3NCAxNy42ODY3OSAxNy42ODY3OSAwIDAgMSAtNi4z%0D%0ANDk4NSAxNy4zMDI4NGwtMzAuODkyNDYgMjQuNTI0OThhMTAuNjA1ODIgMTAuNjA1ODIgMCAwIDAg%0D%0ALTMuMjA0MDggMTIuMzY1MTcgMTAuNjA1ODIgMTAuNjA1ODIgMCAwIDAgMTEuMDA5MTcgNi40Nzc4%0D%0AMmwzOS4xODYtNC41MDI1MWExNy42ODY4IDE3LjY4NjggMCAwIDEgMTYuNzI1IDcuNzQ0OTIgMTcu%0D%0ANjg2OCAxNy42ODY4IDAgMCAxIC43NTUgMTguNDE1NzJsLTE5LjE1NTY2IDM0LjQ4MDE3YTEwLjYw%0D%0ANTgzIDEwLjYwNTgzIDAgMCAwIDEuNzcxNzEgMTIuNjUwMSAxMC42MDU4MyAxMC42MDU4MyAwIDAg%0D%0AMCAxMi42NTAxIDEuNzcxNzFsMzQuNDgwMTMtMTkuMTU1NjNhMTcuNjg2OCAxNy42ODY4IDAgMCAx%0D%0AIDE4LjQxNTcyLjc1NSAxNy42ODY4IDE3LjY4NjggMCAwIDEgNy43NDQ5MiAxNi43MjVsLTQuNTAy%0D%0ANTEgMzkuMTg2YTEwLjYwNTgyIDEwLjYwNTgyIDAgMCAwIDYuNDc3ODIgMTEuMDA5MTcgMTAuNjA1%0D%0AODIgMTAuNjA1ODIgMCAwIDAgMTIuMzY1MTctMy4yMDQxM2wyNC41MjUtMzAuODkyNDdhMTcuNjg2%0D%0ANzkgMTcuNjg2NzkgMCAwIDEgMTcuMzAyODQtNi4zNDk4NSAxNy42ODY3OCAxNy42ODY3OCAwIDAg%0D%0AMSAxMy41NTU3NCAxMi40ODhsMTAuODM3IDM3LjkyOTM1YTEwLjYwNTg1IDEwLjYwNTg1IDAgMCAw%0D%0AIDEwLjE5MzU5IDcuNjkyMTkgMTAuNjA1ODQgMTAuNjA1ODQgMCAwIDAgMTAuMjAxOTMtNy42OTIx%0D%0AMXoiIGZpbGw9IiM0ZmZhN2IiLz48ZyBmaWxsPSIjM2NkZThkIj48cGF0aCBkPSJtMTUzLjE0ODQ0%0D%0AIDI0Ny43MDExNy0zOS4zNDg2NC0zMS4yMzgyOGExOC42MDU5NSAxOC42MDU5NSAwIDAgMSAxMy42%0D%0AOTIzOS0zMy4wNTYxNWw0OS45MTMwOCA1LjczNDg2LTEuODI2MTcgMTUuODk1NTEtNDkuOTEzMS01%0D%0ALjczNDg2YTIuNjA1NzcgMi42MDU3NyAwIDAgMCAtMS45MTggNC42MjkzOWwzOS4zNDk2MSAzMS4y%0D%0AMzgyOHoiLz48cGF0aCBkPSJtMTI1LjM5MDYyIDMyOC43MTM4N2ExOC42MDQ4IDE4LjYwNDggMCAw%0D%0AIDEgLTExLjU4OTg0LTMzLjE3Njc2bDM5LjM0NzY2LTMxLjIzODI4IDkuOTQ5MjIgMTIuNTMxMjUt%0D%0AMzkuMzQ4NjYgMzEuMjM4MjhhMi42MDUzNiAyLjYwNTM2IDAgMCAwIDEuOTE3IDQuNjI5MzlsNDku%0D%0AOTEzMDgtNS43MzQ4NiAxLjgyNjE3IDE1Ljg5NTUxLTQ5LjkxMzA4IDUuNzM0ODZhMTguNDY3MjUg%0D%0AMTguNDY3MjUgMCAwIDEgLTIuMTAxNTUuMTIwNjF6Ii8+PHBhdGggZD0ibTIwMS44NDI3NyA0MDUu%0D%0AMjI0MTJhMTguNDY2NzcgMTguNDY2NzcgMCAwIDEgLTcuMDcyMjYtMS40MDMzMiAxOC42ODI4MiAx%0D%0AOC42ODI4MiAwIDAgMSAtMTEuMzYzMjgtMTkuMzE0NDVsNS43MzQzNy00OS45MTE2MiAxNS44OTQ1%0D%0AMyAxLjgyNjE3LTUuNzM0MzcgNDkuOTEyNmEyLjYwNTgzIDIuNjA1ODMgMCAwIDAgNC42Mjk4OCAx%0D%0ALjkxNzQ4bDMxLjIzODI4LTM5LjM0ODE1IDEyLjUzMTI1IDkuOTQ4MjQtMzEuMjM4MjggMzkuMzQ4%0D%0ANjRhMTguNjgzNDkgMTguNjgzNDkgMCAwIDEgLTE0LjYyMDEyIDcuMDI0NDF6Ii8+PHBhdGggZD0i%0D%0AbTMxMC4xNTcyMyA0MDUuMjI0MTJhMTguNjgwMDggMTguNjgwMDggMCAwIDEgLTE0LjYyMDEyLTcu%0D%0AMDIzOTJsLTMxLjIzODI4LTM5LjM0OTEzIDEyLjUzMTI1LTkuOTQ4MjQgMzEuMjM4MjggMzkuMzQ4%0D%0ANjNhMi42MDYgMi42MDYgMCAwIDAgNC42Mjk4OC0xLjkxN2wtNS43MzQzNy00OS45MTM1NyAxNS44%0D%0AOTQ1My0xLjgyNjE3IDUuNzM0MzcgNDkuOTEyNTlhMTguNjgyMyAxOC42ODIzIDAgMCAxIC0xMS4z%0D%0ANjMyOCAxOS4zMTM0OCAxOC40NjMyIDE4LjQ2MzIgMCAwIDEgLTcuMDcyMjYgMS40MDMzM3oiLz48%0D%0AcGF0aCBkPSJtMzg2LjYwOTM4IDMyOC43MTM4N2ExOC4zNTUxMyAxOC4zNTUxMyAwIDAgMSAtMi4x%0D%0AMDE1Ny0uMTIwNjFsLTQ5LjkxMzA4LTUuNzM0ODYgMS44MjYxNy0xNS44OTU1MSA0OS45MTMwOCA1%0D%0ALjczNDg2YTIuNjA1NzcgMi42MDU3NyAwIDAgMCAxLjkxOC00LjYyOTM5bC0zOS4zNDk2MS0zMS4y%0D%0AMzgyOCA5Ljk0OTIyLTEyLjUzMTI1IDM5LjM0ODY0IDMxLjIzODI4YTE4LjYwNTI1IDE4LjYwNTI1%0D%0AIDAgMCAxIC0xMS41OTA4MiAzMy4xNzY3NnoiLz48cGF0aCBkPSJtMzU4Ljg1MTU2IDI0Ny43MDEx%0D%0ANy05Ljk0OTIyLTEyLjUzMTI1IDM5LjM0ODY2LTMxLjIzODI4YTIuNjA1MzYgMi42MDUzNiAwIDAg%0D%0AMCAtMS45MTctNC42MjkzOWwtNDkuOTEzMDggNS43MzQ4Ni0xLjgyNjE3LTE1Ljg5NTUxIDQ5Ljkx%0D%0AMzA4LTUuNzM0ODZhMTguNjA1NTMgMTguNjA1NTMgMCAwIDEgMTMuNjkxNDEgMzMuMDU2MTV6Ii8+%0D%0APHBhdGggZD0ibTMyMi44NTg0IDE3Ny40MDUyNy0xNS44OTQ1My0xLjgyNjE3IDUuNzM0MzctNDku%0D%0AOTEyNmEyLjYwNTgzIDIuNjA1ODMgMCAwIDAgLTQuNjI5ODgtMS45MTc0OGwtMzEuMjM4MjggMzku%0D%0AMzQ4MTUtMTIuNTMxMjUtOS45NDgyNCAzMS4yMzgyOC0zOS4zNDg2NGExOC42MDU0MSAxOC42MDU0%0D%0AMSAwIDAgMSAzMy4wNTU2NiAxMy42OTMzNnoiLz48cGF0aCBkPSJtMTg5LjE0MTYgMTc3LjQwNTI3%0D%0ALTUuNzM0MzctNDkuOTEyNTlhMTguNjA1NTUgMTguNjA1NTUgMCAwIDEgMzMuMDU1NjYtMTMuNjky%0D%0AODhsMzEuMjM4MjggMzkuMzQ5MTMtMTIuNTMxMjUgOS45NDgyNC0zMS4yMzgyOC0zOS4zNDg2M2Ey%0D%0ALjYwNiAyLjYwNiAwIDAgMCAtNC42Mjk4OCAxLjkxN2w1LjczNDM3IDQ5LjkxMzU3eiIvPjxwYXRo%0D%0AIGQ9Im0yNjcuNzM2MzMgMjE4LjE5Nzc1LTkuMjMwNDctMzIuMzA3NjFhMi42MDY1MiAyLjYwNjUy%0D%0AIDAgMCAwIC01LjAxMjcuMDAxNDZsLTkuMjI5NDkgMzIuMzA2MTUtMTUuMzg0NzYtNC4zOTU1IDku%0D%0AMjMwNDctMzIuMzA3NjJhMTguNjA2MjcgMTguNjA2MjcgMCAwIDEgMzUuNzgwMjctLjAwMTQ3bDku%0D%0AMjMxNDQgMzIuMzA5MDl6Ii8+PHBhdGggZD0ibTIxMy44MDE3NiAyODMuMTIxMDktMzIuMzA3NjIt%0D%0AOS4yMzFhMTguNjA2IDE4LjYwNiAwIDAgMSAuMDAxLTM1Ljc4MDI4bDMyLjMwNjY0LTkuMjMxIDQu%0D%0AMzk2NDggMTUuMzg0NzYtMzIuMzA3NjIgOS4yMzFhMi42MDU1IDIuNjA1NSAwIDAgMCAtLjAwMSA1%0D%0ALjAxMDc0bDMyLjMwODU5IDkuMjMxeiIvPjxwYXRoIGQ9Im0yNTYgMzQ0YTE4LjY4NjIyIDE4LjY4%0D%0ANjIyIDAgMCAxIC0xNy44ODk2NS0xMy40OTMxNmwtOS4yMzE0NC0zMi4zMDkwOSAxNS4zODQ3Ni00%0D%0ALjM5NTUgOS4yMzA0NyAzMi4zMDc2MWEyLjYwNjUyIDIuNjA2NTIgMCAwIDAgNS4wMTI3LS4wMDE0%0D%0ANmw5LjIyOTQ5LTMyLjMwNjE1IDE1LjM4NDc2IDQuMzk1NS05LjIzMDQ3IDMyLjMwNzYyYTE4LjY4%0D%0ANzgzIDE4LjY4NzgzIDAgMCAxIC0xNy44OTA2MiAxMy40OTQ2M3oiLz48cGF0aCBkPSJtMjk4LjE5%0D%0AODI0IDI4My4xMjEwOS00LjM5NjQ4LTE1LjM4NDc2IDMyLjMwNzYyLTkuMjMxYTIuNjA1NSAyLjYw%0D%0ANTUgMCAwIDAgLjAwMS01LjAxMDc0bC0zMi4zMDg1OS05LjIzMSA0LjM5NjQ4LTE1LjM4NDc2IDMy%0D%0ALjMwNzYyIDkuMjMxYTE4LjYwNiAxOC42MDYgMCAwIDEgLS4wMDEgMzUuNzgwMjh6Ii8+PC9nPjwv%0D%0Ac3ZnPg==" ></h1>
+          <p  class="badge badge-pill badge-dark font-italic">Atualizado Diariamente</p> <p id="atualização" class="badge badge-pill badge-dark font-italic"></p>
         </div> 
-        <div class="col-md-3 "> 
-          <br><br><br><br>
-          <p id="atualização" class="badge badge-pill badge-dark font-italic"></p>       
+        <div class="col-md-3 ">             
         </div>
       </div>
       <br>
 
         <div class="row">
-          <div id="resume_infectados" class="col-md-3 ">
+          <div id="resume_infectados" class="col-md-3 col-sm-6 col-3">
           </div>
-          <div id="resume_recuperados" class="col-md-3 ">
+          <div id="resume_recuperados" class="col-md-3 col-sm-6 col-3">
           </div>
-          <div id="resume_mortos" class="col-md-3 ">
+          <div id="resume_mortos" class="col-md-3 col-sm-6 col-3">
           </div>
-          <div id="resume_letalidade" class="col-md-3 ">
+          <div id="resume_letalidade" class="col-md-3 col-sm-6 col-3">
           </div>
         </div> <br>   
 
         <div class="row">
           <div class="col-md-7 blog-main"><!-- /coluna 1 --> 
             <br>
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1pERy0gBm8zgOoGueALRQ3Z-bE7z2PW3N"style="width:100%; height:500px;"></iframe><br><br>
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1pERy0gBm8zgOoGueALRQ3Z-bE7z2PW3N"style="width:100%; height:495px;"></iframe><br><br><br>
             <div id="container1" class="borda" style="width:100%; height:500px;"></div><br><br>
             <div id="container2" class="borda" style="width:100%; height:500px;"></div><br><br>
             <div id="container3" class="borda" style="width:100%; height:500px;"></div><br><br>

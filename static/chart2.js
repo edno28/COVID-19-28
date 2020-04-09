@@ -1,5 +1,9 @@
 const url2 = 'https://covid19-brazil-api.now.sh/api/report/v1/countries';
 
+data_show()
+chart('container5',grafico1,mod1);
+chart('container6',grafico2,mod1);
+
 function getJSON (url, callback){
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function (){
@@ -12,39 +16,47 @@ function getJSON (url, callback){
     return xmlHttp.response
 }
 
+function chart(seletor,grafico,modificador_dado=null){getJSON(url2, function (response) {
+    var json = JSON.parse(response);
+    var arr = Object.keys(json).map(key => [key, json[key]])
+    return grafico(modificador_dado(arr),seletor) 
+})};
+
+function date_update(x){
+    var atualizacao=[x['updated_at']]  
+    var atualizacao= atualizacao[0]
+
+    let dia=atualizacao.substr(0,10)
+    dia=dia.split("-")
+    
+    var hora=atualizacao.substr(11,8)
+    hora=hora.split(":")
+    
+    if(hora[1]<3){
+        hora[1]=toString(24-(hora[1]-3))
+        dia[2]=dia[2]-1
+        
+    }else{
+        hora=[hora[0]-3,hora[1]] 
+        hora=`${hora[0]}:${hora[1]}`   
+    }
+    
+    dia=`${dia[2]}/${dia[1]}/${dia[0]}`
+    document.getElementById("atualização").innerHTML = `Ultima Atualização: ${hora}  ${dia}`
+}
+
 function data_show(){getJSON(url2, function (response) {
     let json = JSON.parse(response);
     let arr = Object.keys(json).map(key => [key, json[key]])
     let brasil = arr[0][1][39];
     let letalidade=brasil['deaths']/(brasil['confirmed']/100)
 
-    var atualizacao=[brasil['updated_at']]  
-    var atualizacao= atualizacao[0]
-    var dia=atualizacao.substr(0,10)
-    var hora=atualizacao.substr(11,8)
-    hora=hora.split(":")
-    hora=[hora[1],hora[0]-4]
-    hora=`${hora[1]}:${hora[0]}`
-
-    console.log(hora)
+    date_update(brasil);
 
     document.getElementById("resume_infectados").innerHTML =`<h1>${brasil['confirmed']}</h1><br><h4>Casos Confirmados</h4>`
     document.getElementById("resume_recuperados").innerHTML = `<h1>${brasil['recovered']}</h1><br><h4>Casos Recuperados</h4>`
     document.getElementById("resume_mortos").innerHTML = `<h1>${brasil['deaths']}</h1><br><h4>Óbitos</h4>`
-    document.getElementById("resume_letalidade").innerHTML = `<h1>${letalidade.toFixed(2)}%</h1><br><h4>Letalidade</h4>`
-    document.getElementById("atualização").innerHTML = `Ultima Atualização: ${hora}  ${dia}`
-    
-})};
-data_show()
-
-chart('container5',grafico1,mod1);
-chart('container6',grafico2,mod1);
-
-
-function chart(seletor,grafico,modificador_dado=null){getJSON(url2, function (response) {
-    var json = JSON.parse(response);
-    var arr = Object.keys(json).map(key => [key, json[key]])
-    return grafico(modificador_dado(arr),seletor) 
+    document.getElementById("resume_letalidade").innerHTML = `<h1>${letalidade.toFixed(2)}%</h1><br><h4>Letalidade</h4>`   
 })};
 
 function mod1(data){
@@ -117,7 +129,7 @@ function grafico1(data,seletor){
             color:"#000000"
         },]
     });
-    document.getElementById(seletor).innerHTML = Highcharts.chart()  
+    Highcharts.chart()  
 }
 
 function grafico2(data,seletor){
@@ -174,7 +186,7 @@ function grafico2(data,seletor){
             },]
             }]
     });
-    document.getElementById(seletor).innerHTML = Highcharts.chart()  
+    Highcharts.chart()  
 }
 
 
