@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="Edno Sousa Teofilo" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.6">
-    <title>CORONA GRAFICOS</title>
+    <meta name="description" content="Projeto compartilhamento de informações em tempo real sobre o Corona virus(Covid-19)">
+    <meta name="Edno Sousa Teofilo" content="Desenvolvedor">
+    <title>Covid-19 Gráficos</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="static/css/bootstrap.css" >
@@ -37,8 +36,9 @@
     <script src="https://code.highcharts.com/modules/data.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="static/chart.js"></script>
+    <script src="static/chart3.js"></script>
     <script src="static/chart2.js"></script>
+    <script src="static/chart.js"></script>
   
     <style>
       body1{
@@ -72,8 +72,10 @@
         background: rgb(90, 18, 173);
         box-shadow: 0px 0px 6px 2px #2e2941;
       }
-      div#centro {
-        text-align: center
+      div#nome_table {
+        font-size:x-large;
+        color: #060;
+        font-family: serif;
       }
       
       </style>
@@ -106,7 +108,7 @@
 
         <div class="row">
           <div class="col-md-7 blog-main"><!-- /coluna 1 --> 
-            <br>
+            <br>            
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1pERy0gBm8zgOoGueALRQ3Z-bE7z2PW3N"style="width:100%; height:495px;"></iframe><br><br><br>
             <div id="container1" class="borda" style="width:100%; height:500px;"></div><br><br>
             <div id="container2" class="borda" style="width:100%; height:500px;"></div><br><br>
@@ -115,12 +117,28 @@
           <div class="col-md-4 blog-main"><!-- <img src="{% static 'img/casos_01.png' %}"> Mais informações podem ser encontrada em <cite>covid.saude.gov.br</cite> --> 
             <br>
             <div id="container5" class="borda" style="width:100%; height:500px;"></div><br><br>
+
+            <div  class="borda" style="width:100%; height:500px; overflow:auto;">
+              <table class="">
+                <thead>
+                  <tr>
+                    <th>Estado&nbsp;&nbsp;</th>
+                    <th>Infectados&nbsp;&nbsp;</th>
+                    <th>Mortos&nbsp;&nbsp;</th>
+                    <th>Curados&nbsp;</th>  
+                  </tr>               
+                <tbody id="tabela">
+                </tbody>
+                </thead>
+              </table>
+            </div><br><br>
+
             <div id="container6" class="borda" style="width:100%; height:500px;"></div><br><br>
             <div id="container4" class="borda" style="width:100%; height:500px;"></div><br><br>
 
             <div class="borda" style="width:100%;height:500px;">
-              <li class="list-group-item active"><h3>&nbsp;&nbsp;&nbsp;&nbsp;Para mais informações <span class="glyphicon glyphicon-search"></span></h3></a></li>
-              <div style="width:100%;height:410px; overflow: auto;">
+              <li class="list-group-item active"><h3>&nbsp;&nbsp;Para mais informações <span class="glyphicon glyphicon-search"></span></h3></a></li>
+              <div style="width:100%;height:405px; overflow: auto;">
                 <br>
                 <ul >
                   <li><a href="https://painel-covid19.saude.ma.gov.br/" target="_blank"><h4>Secretaria de Saude do Maranhão</h4>
@@ -129,7 +147,7 @@
                     <p>Braço para a saúde da Organização das Nações Unidas (ONU), o órgão centraliza informações e recomendações em torno da crise.</p></a></li>
                       
                   <li><a target="_blank" href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"><h4>Universidade Johns Hopkins</h4>
-                    <p>O painel online da prestigiada instituição americana de ensino se tornou uma referência durante a 
+                    <p class="text-justify">O painel online da prestigiada instituição americana de ensino se tornou uma referência durante a 
                       pandemia, principalmente pela agilidade da atualização dos dados.</p></a></li>
 
                   <li><a target="_blank" href="https://nextstrain.org/ncov"><h4>Nextstrain</h4>
