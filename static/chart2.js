@@ -2,7 +2,7 @@ const url2 = 'https://covid19-brazil-api.now.sh/api/report/v1/countries';
 
 data_show()
 chart('container5',grafico1,mod1);
-chart('container6',grafico2,mod1);
+//chart('container6',grafico2,mod1);
 
 function getJSON (url, callback){
     var xmlHttp = new XMLHttpRequest();
@@ -22,6 +22,7 @@ function chart(seletor,grafico,modificador_dado=null){getJSON(url2, function (re
     return grafico(modificador_dado(arr),seletor) 
 })};
 
+
 function date_update(x){
     var atualizacao=[x['updated_at']]  
     var atualizacao= atualizacao[0]
@@ -31,16 +32,15 @@ function date_update(x){
     
     var hora=atualizacao.substr(11,8)
     hora=hora.split(":")
-    
-    if(hora[1]<3){
-        hora[1]=toString(24-(hora[1]-3))
+
+    if(parseInt(hora[0])<3){
+        hora[0]=24-(3-hora[0])
         dia[2]=dia[2]-1
-        
     }else{
-        hora=[hora[0]-3,hora[1]] 
-        hora=`${hora[0]}:${hora[1]}`   
+        hora=[hora[0]-3,hora[1]]          
     }
-    
+
+    hora=`${hora[0]}:${hora[1]}` 
     dia=`${dia[2]}/${dia[1]}/${dia[0]}`
     document.getElementById("atualização").innerHTML = `Ultima Atualização: ${hora}  ${dia}`
 }
@@ -131,63 +131,4 @@ function grafico1(data,seletor){
     });
     Highcharts.chart()  
 }
-
-function grafico2(data,seletor){
-    Highcharts.chart(seletor, {
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: 'SITUAÇÃO REGIONAL'
-        },
-        tooltip: {
-            pointFormat: `{series.name}: {point.y:.1f}<br>
-                        <b>{point.percentage:.1f}%</b> `
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: false,
-                    
-                },
-                showInLegend: true
-            }
-        },     
-        series: [{
-            name: 'Contaminados',
-            colorByPoint: true,
-            data: [{
-                name: 'Suldeste 10624',
-                y: 10624,
-                color:"#3CB371",
-                sliced: true,
-                selected: true
-            },{ 
-                name: 'Norte 1360',
-                y: 1360,
-                color:"#C71585"
-            }, {
-                name: 'Nordeste  3242',
-                y: 3242,
-                color:"#FF4500"
-            }, {
-                name: 'Centro-Oeste  903',
-                y: 903,
-                color:"#6A5ACD"
-            }, {
-                name: 'Sul  1551',
-                y: 1428,
-                color:"#FFFF00"
-            },]
-            }]
-    });
-    Highcharts.chart()  
-}
-
-
 
