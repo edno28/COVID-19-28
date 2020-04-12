@@ -18,6 +18,7 @@ function tabela(){getJSON(url3, function (response) {
     let json = JSON.parse(response);
     let arr = Object.keys(json).map(key => [key, json[key]]) 
     let estados= arr[0][1]
+    console.log(estados[0])
     var div=document.getElementById("tabela")
     var a=``
     for(c in estados){
@@ -25,7 +26,7 @@ function tabela(){getJSON(url3, function (response) {
           <td>${estados[c]["state"]}</td>
           <td>${estados[c]["cases"]}</td>
           <td>${estados[c]["deaths"]}</td>
-          <td>${estados[c]["refuses"]}</td>
+          <td>${estados[c]["suspects"]}</td>
           </tr><br>`        
     }
     div.innerHTML=a  
